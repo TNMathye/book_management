@@ -20,7 +20,7 @@ This project provides a comprehensive book management system with features like:
 - Lombok
 - Hibernate Validator
 - Swagger/OpenAPI
-- JUnit 5 & Mockito
+- JUnit & Mockito
 
 ## Prerequisites
 
