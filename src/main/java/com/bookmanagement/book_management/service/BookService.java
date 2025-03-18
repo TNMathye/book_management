@@ -7,13 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bookmanagement.book_management.model.Book;
-import com.bookmanagement.book_management.repository.BookRepo;
+import com.bookmanagement.book_management.repository.BMRepository;
 
 @Service
 public class BookService {
     
-    @Autowired
-    private BookRepo bookRepo;
+    private BMRepository bookRepo;
+    
+    public BookService(BMRepository bookRepo) {
+        this.bookRepo = bookRepo;
+    }
 
     public List<Book> getBooks() {
         return bookRepo.findAll();    
